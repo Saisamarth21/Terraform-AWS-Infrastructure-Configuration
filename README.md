@@ -1,4 +1,4 @@
-This project demonstrates how to fully configure AWS infrastructure using Terraform. It covers the complete process—from installing and configuring the AWS CLI, creating AWS access keys, installing Terraform, and running Terraform commands—to provision basic AWS resources such as a Virtual Private Cloud (VPC), subnets, an Internet Gateway, a security group, an EC2 instance, and an S3 bucket.
+This project demonstrates how to fully configure AWS infrastructure using Terraform. It covers the complete process from installing and configuring the AWS CLI, creating AWS access keys, installing Terraform, and running Terraform commands to provision basic AWS resources such as a Virtual Private Cloud (VPC), subnets, an Internet Gateway, a security group, an EC2 instance, and an S3 bucket.
 
 ## Overview
 
@@ -252,6 +252,9 @@ variable "bucket_name" {
 terraform init
 ```
 
+![Screenshot 2025-03-04 004838](https://github.com/user-attachments/assets/2d9bb27d-6ca5-48a5-b047-9856c52eb8ee)
+
+
 3.  **Review the Terraform Plan:**  
 
 ```bash
@@ -267,7 +270,10 @@ terraform apply
 ```
 
 - Confirm the prompt by typing `yes`. Terraform will create your infrastructure.
-    
+
+![Screenshot 2025-03-04 004753](https://github.com/user-attachments/assets/4ebdb79a-8f16-4ac3-aa0b-4ed803c5965e)
+
+
 5. **Verify Your Resources:**
     
     - Check the AWS Console to see the newly created VPC, EC2 instance, and S3 bucket.
@@ -276,6 +282,9 @@ terraform apply
 ```bash
 ssh -i my-key.pem ec2-user@<EC2_PUBLIC_IP>
 ```
+
+![Screenshot 2025-03-04 005439](https://github.com/user-attachments/assets/bf9d2177-46db-45b6-885f-c97677b61923)
+
 
 
 ## Cleaning Up
@@ -287,4 +296,6 @@ terraform destroy
 ```
 
 Confirm by typing `yes` when prompted.
+
+![Screenshot 2025-03-04 005313](https://github.com/user-attachments/assets/07a11608-a89c-4af9-b6dc-4f7395ceaf66)
 
